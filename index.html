@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscious Equality - Cultural Competence Training for UK Public Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#dfc080',
+                            brown: '#2d2512',
+                            olive: '#887e53',
+                            green: '#46502e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f7f4;
+            color: #2d2512;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #dfc080 0%, #2d2512 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(45, 37, 18, 0.1);
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(45, 37, 18, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 10px 15px rgba(45, 37, 18, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="h-10 w-10 text-brand-gold" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 8C18.7 8 8 18.7 8 32C8 45.3 18.7 56 32 56C45.3 56 56 45.3 56 32C56 18.7 45.3 8 32 8Z" stroke="currentColor" stroke-width="4"/>
+                    <path d="M32 16V32L42 42" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M20 4L44 4" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <span class="ml-2 text-xl font-bold text-brand-brown">Conscious Equality</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-brand-brown hover:text-brand-gold font-medium">Home</a>
+                <a href="#" class="text-brand-brown hover:text-brand-gold font-medium">Training</a>
+                <a href="#" class="text-brand-brown hover:text-brand-gold font-medium">About</a>
+                <a href="#" class="text-brand-brown hover:text-brand-gold font-medium">Testimonials</a>
+                <a href="#" class="text-brand-brown hover:text-brand-gold font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-brand-brown hover:text-brand-gold">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="#" class="block text-brand-brown hover:text-brand-gold font-medium py-2">Home</a>
+                <a href="#" class="block text-brand-brown hover:text-brand-gold font-medium py-2">Training</a>
+                <a href="#" class="block text-brand-brown hover:text-brand-gold font-medium py-2">About</a>
+                <a href="#" class="block text-brand-brown hover:text-brand-gold font-medium py-2">Testimonials</a>
+                <a href="#" class="block text-brand-brown hover:text-brand-gold font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-brand-gold text-brand-brown py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-3/5 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Building Cultural Bridges in UK Public Services</h1>
+                <p class="text-lg mb-8">Specialised training for frontline professionals working with migrant communities. We help education, healthcare, social care, police, housing and emergency services improve outcomes through cultural understanding.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-brand-brown text-white font-semibold py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300">
+                        Explore Training
+                    </button>
+                    <button class="border-2 border-brand-brown text-brand-brown font-semibold py-3 px-6 rounded-lg hover:bg-brand-brown hover:text-white hover:bg-opacity-10 transition duration-300">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-2/5">
+                <a href="https://ibb.co/MkY3gKFb"><img src="https://i.ibb.co/HTWkKR50/CE-no-background.png" alt="CE-no-background" border="0"></a><br /><a target='_blank'</a><br />
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-brand-brown">Why Choose Our Training</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#f5f1e6] p-6 rounded-lg shadow-sm card-hover transition duration-300 border-t-4 border-brand-gold">
+                    <div class="bg-brand-gold bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-brand-brown">Specialist Knowledge</h3>
+                    <p class="text-brand-brown opacity-80">Our trainers have extensive experience working with diverse migrant communities and understand the unique challenges faced by UK public service professionals.</p>
+                </div>
+                
+                <div class="bg-[#f5f1e6] p-6 rounded-lg shadow-sm card-hover transition duration-300 border-t-4 border-brand-olive">
+                    <div class="bg-brand-olive bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-brand-brown">Practical Approach</h3>
+                    <p class="text-brand-brown opacity-80">Our training focuses on real-world scenarios and practical tools that frontline workers can immediately apply to improve communication and outcomes.</p>
+                </div>
+                
+                <div class="bg-[#f5f1e6] p-6 rounded-lg shadow-sm card-hover transition duration-300 border-t-4 border-brand-green">
+                    <div class="bg-brand-green bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-brand-brown">Tailored Content</h3>
+                    <p class="text-brand-brown opacity-80">We customise our training to address the specific needs of different public service sectors, from education to healthcare to law enforcement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses -->
+    <section class="py-16 bg-[#f5f1e6]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-brand-brown">Our Training Programmes</h2>
+            <p class="text-center text-brand-brown opacity-80 mb-12 max-w-2xl mx-auto">Specialised training to help UK public service professionals work effectively with migrant communities.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 bg-brand-gold flex items-center justify-center">
+                        <svg class="w-20 h-20 text-brand-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-brand-gold bg-opacity-20 text-brand-brown text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
+                            <span class="text-brand-brown opacity-70">1 day</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-brand-brown">Cultural Awareness for Education</h3>
+                        <p class="text-brand-brown opacity-80 mb-4">Helping teachers and education staff support migrant children and engage effectively with their families to improve educational outcomes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-brand-green font-bold">From £450</span>
+                            <button class="bg-brand-green text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 bg-brand-olive flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-brand-olive bg-opacity-20 text-brand-brown text-xs font-semibold px-3 py-1 rounded-full">Healthcare</span>
+                            <span class="text-brand-brown opacity-70">1 day</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-brand-brown">Cross-Cultural Healthcare</h3>
+                        <p class="text-brand-brown opacity-80 mb-4">Equipping healthcare professionals with the skills to provide culturally sensitive care and overcome language and cultural barriers.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-brand-green font-bold">From £450</span>
+                            <button class="bg-brand-green text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="h-48 bg-brand-brown flex items-center justify-center">
+                        <svg class="w-20 h-20 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-brand-brown bg-opacity-20 text-brand-brown text-xs font-semibold px-3 py-1 rounded-full">Law Enforcement</span>
+                            <span class="text-brand-brown opacity-70">1 day</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-brand-brown">Cultural Competence for Police</h3>
+                        <p class="text-brand-brown opacity-80 mb-4">Helping police officers build trust with migrant communities, understand cultural differences, and improve community safety outcomes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-brand-green font-bold">From £450</span>
+                            <button class="bg-brand-green text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-brand-brown text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300">
+                    View All Training
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-brand-brown">What Our Clients Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 border-l-4 border-brand-gold">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-brand-gold bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center text-brand-brown font-bold text-xl">
+                            JD
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-brand-brown">Jane Davies</h4>
+                            <p class="text-brand-brown opacity-70 text-sm">Primary School Headteacher</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-brand-gold">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-brand-brown opacity-80">"The training transformed how our staff approach cultural differences. We've seen significant improvements in communication with migrant families and better engagement from children who previously struggled to integrate."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 border-l-4 border-brand-olive">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-brand-olive bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center text-brand-brown font-bold text-xl">
+                            SR
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-brand-brown">Dr. Sarah Rahman</h4>
+                            <p class="text-brand-brown opacity-70 text-sm">NHS Clinical Lead</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-brand-gold">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-brand-brown opacity-80">"The practical strategies we learned have made a real difference in our patient care. Our staff now feel more confident addressing cultural sensitivities, and we've seen improved treatment adherence among migrant patients."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 border-l-4 border-brand-green">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-brand-green bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center text-brand-brown font-bold text-xl">
+                            MT
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-brand-brown">Mark Thompson</h4>
+                            <p class="text-brand-brown opacity-70 text-sm">Police Community Support Manager</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-brand-gold">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-brand-brown opacity-80">"This training has been invaluable for our community policing team. We've built stronger relationships with migrant communities, increased reporting of incidents, and improved safety outcomes across our district."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-brand-brown text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Improve Cultural Understanding in Your Organisation?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join hundreds of UK public service professionals who are building stronger connections with migrant communities through our specialist training.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-brand-gold text-brand-brown font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300">
+                    Book Training
+                </button>
+                <button class="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300">
+                    Request Information
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#f5f1e6] text-brand-brown py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-brand-gold" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 8C18.7 8 8 18.7 8 32C8 45.3 18.7 56 32 56C45.3 56 56 45.3 56 32C56 18.7 45.3 8 32 8Z" stroke="currentColor" stroke-width="4"/>
+                            <path d="M32 16V32L42 42" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M20 4L44 4" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-brand-brown">Conscious Equality</span>
+                    </div>
+                    <p class="text-brand-brown opacity-80 mb-4">Helping UK public service professionals build cultural bridges with migrant communities for better outcomes and safer partnerships.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-brand-olive hover:text-brand-gold">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-brand-olive hover:text-brand-gold">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-brand-olive hover:text-brand-gold">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-brand-olive hover:text-brand-gold">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-brand-brown">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Home</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">About Us</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Training Programmes</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Testimonials</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-brand-brown">Our Training</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Education Sector</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Healthcare Professionals</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Police & Law Enforcement</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Social Services</a></li>
+                        <li><a href="#" class="text-brand-brown opacity-80 hover:text-brand-gold">Housing & Local Authorities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-brand-brown">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-gold mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-brand-brown opacity-80">123 Bridge Street, Cultural Centre, London, UK</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-gold mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-brand-brown opacity-80">info@consciousequality.co.uk</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-gold mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-brand-brown opacity-80">+44 (0) 20 1234 5678</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold mb-3 text-brand-brown">Subscribe to our newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="bg-white border border-brand-olive text-brand-brown px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-brand-gold w-full">
+                            <button class="bg-brand-olive text-white px-4 py-2 rounded-r-lg hover:bg-brand-green transition duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-brand-olive border-opacity-30 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-brand-brown opacity-70 text-sm mb-4 md:mb-0">&copy; 2023 Conscious Equality. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-brand-brown opacity-70 hover:text-brand-gold text-sm">Privacy Policy</a>
+                    <a href="#" class="text-brand-brown opacity-70 hover:text-brand-gold text-sm">Terms of Service</a>
+                    <a href="#" class="text-brand-brown opacity-70 hover:text-brand-gold text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'965ddf0da288f383',t:'MTc1MzYzNzQ5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
